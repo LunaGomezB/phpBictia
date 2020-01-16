@@ -1,0 +1,51 @@
+Inicializar PHP <?php ?>;
+
+Modelo vista controlador 
+ Un patrón de diseño que nos permite estructurar un determinado proyecto
+ para mayor organización,
+     Modelo -> Hace referncia a la plantilla del back con relación a 
+               nuestra base de datos BD.
+
+               Haciendo referencia a nuestras tablas
+
+      Vista -> Se encarga de manejar todas las interfaces gráficas que verá
+               nuestro usuario.
+  
+      Controlador -> Es el puente entre la BD y la vista (rutas, funciones, querys)
+                     El usuario desde la vista (formulario) envía los datos.
+		     Estos datos llegan primero al controlador, el controlador verifica
+		     con el modelo que los datos enviados por el usuario conincidan con la estructura
+		     de la tabla en nuestra BD.
+		     Si esto es correcto, se envían kis datos a guardarse en la BD, si no, El controlador
+		     devuelve a la vista un mensaje.
+
+POO -> Programación Orientada a Objetos
+	Reflejo en codificación de objetos o sucesos de la vida cotidiana.
+	Ideal para ek modelo de datos y procesos.
+	POO es una arquitectura de datos.
+		POO tiene clases, métodos y parámetros (atributos).
+			donde un objeto es una clase -> Persona
+						class Persona -> Mayusculas 
+  						Date() fecha -> JavaScript
+			parámetros (atributos) -> las características de esa persona
+			métodos -> las acciones de esa persona
+
+
+ 			class Persona{
+				public $nombre; // todo debe llevar ; al final // es una variable publica todos las pueden ver
+				public $apellidos;
+			public function__constructor($nombre, $apellido){
+				   //El constructor es el inicializador de las caracteristicas (atributos)
+ 				  //de la clase
+					$this->nombre = $nombre;
+					$this->apellido = $apellido;
+		
+				}
+				 // Un metodo es una función que solo puede hacer el objeto o clase
+				public function saludar(){
+               				echo "Hola, soy" . $this->nombre;
+                                }
+			}
+		//Instancia
+		$persona = new Persona() // fecha = new Date ();
+                $persona-> saludar();
